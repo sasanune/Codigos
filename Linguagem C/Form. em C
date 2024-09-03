@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+	char nome [20];
+	int anoNascimento, idade;
+	float altura;
+	bool maiorDeIdade;
+
+	printf("Qual é o seu nome?");
+	scanf ("%s", nome);
+
+	printf("Qual seu ano de nascimento?");
+	scanf ("%d", &anoNascimento);
+
+	idade = 2024 - anoNascimento;
+
+	if(idade>18) {
+		maiorDeIdade = true;
+	} else {
+		maiorDeIdade = false;
+	}
+	printf("Qual é a sua altura:");
+	scanf("%f", &altura);
+
+	printf("%s tem %d anos, ",nome,idade);
+	if(maiorDeIdade) {
+		printf(" maior de idade ");
+	} else {
+		printf("maior de idade ");
+	}
+	printf("e mede %.2f metros de altura.", altura);
+
+	return 0;
+}
